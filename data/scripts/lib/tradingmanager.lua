@@ -17,7 +17,7 @@ function TradingManager:updateBoughtGoodGui(index, good, price)
     local line = self.boughtLines[index]
 
     local newNumberValue
-    if ownCargo > capacity then
+    if ownCargo > capacity and capacity > 0 then
         newNumberValue = tostring(capacity)        
     else
         newNumberValue = tostring(ownCargo)
